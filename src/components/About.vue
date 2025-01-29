@@ -245,12 +245,25 @@
                     <AwardIcon class="w-6 h-6 text-[#783DFF]" />
                   </div>
                 </div>
-                <div>
+                <div class="flex-1">
                   <h4 class="font-bold text-gray-900 dark:text-white group-hover:text-[#783DFF] transition-colors duration-300">
                     {{ edu.title[locale] }}
                   </h4>
                   <p class="text-sm text-gray-500 dark:text-gray-400">{{ edu.institution }}</p>
                   <p class="text-sm text-gray-500 dark:text-gray-400">{{ edu.year }}</p>
+                  
+                  <!-- Affichage de l'ID de certification si présent -->
+                  <p v-if="edu.certificationId" class="mt-2 text-sm text-[#783DFF] font-medium">
+                    ID: {{ edu.certificationId }}
+                  </p>
+
+                  <!-- Liste des certifications si présentes -->
+                  <div v-if="edu.certifications" class="mt-2 space-y-1">
+                    <p v-for="cert in edu.certifications" :key="cert" class="text-sm text-gray-600 dark:text-gray-300 flex items-center">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[#783DFF] mr-2"></span>
+                      {{ cert }}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -446,15 +459,15 @@ const content = {
     }
   ],
   experiences: [
-  {
+    {
       role: {
         fr: 'Freelance',
         en: 'Freelance'
       },
       company: 'Freelance',
       period: '2023 - Présent',
-    description: {
-        fr: 'Développement de sites web et applications mobiles pour des clients locaux et internationnaux.',
+      description: {
+        fr: 'Développement de sites web et applications mobiles pour des clients locaux et internationaux.',
         en: 'Development of web sites and mobile applications for local and international clients.'
       }
     },
@@ -465,8 +478,8 @@ const content = {
       },
       company: 'DropMe Sarl - Sur site',
       period: '2023 - Présent',
-    description: {
-        fr: 'Conecption et réalisation d’une des applications mobile de la structure (DropMe).',
+      description: {
+        fr: 'Conception et réalisation d\'une des applications mobile de la structure (DropMe).',
         en: 'Development of one of the mobile applications of the structure (DropMe).'
       }
     },
@@ -477,8 +490,8 @@ const content = {
       },
       company: 'Busilience SAS - (Remote)',
       period: '2022',
-    description: {
-        fr: 'Site web officiel de l\'entreprise, Brand designing de la marque de l’entreprise (logo, typo, couleurs...), Référencement naturel (SEO) du site web',
+      description: {
+        fr: 'Site web officiel de l\'entreprise, Brand designing de la marque de l\'entreprise (logo, typo, couleurs...), Référencement naturel (SEO) du site web',
         en: 'Web and mobile application development, cloud solution architecture.'
       }
     }
@@ -520,11 +533,28 @@ const content = {
     },
     {
       title: {
-        fr: 'AWS Solutions Architect',
-        en: 'AWS Solutions Architect'
+        fr: 'Fondamentaux du Marketing Numérique',
+        en: 'Digital Marketing Fundamentals'
       },
-      institution: 'Amazon Web Services',
-      year: '2021'
+      institution: 'Google Ateliers Numériques',
+      year: '01/2023',
+      certificationId: 'R5C MCS WPD'
+    },
+    {
+      title: {
+        fr: 'Parcours Développeur Web',
+        en: 'Web Developer Path'
+      },
+      institution: 'OpenClassrooms',
+      year: '2022',
+      certifications: [
+        'Intégrez une maquette Figma en HTML / CSS',
+        'Gérez du code avec Git et GitHub',
+        'Simplifiez-vous le CSS avec Sass',
+        'Créez votre site web avec HTML5 et CSS3',
+        'Mettez en place votre environnement front-end',
+        'Apprenez à utiliser la ligne de commande dans un terminal'
+      ]
     }
   ],
   stats: {
