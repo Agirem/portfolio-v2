@@ -373,7 +373,7 @@ const projects = [
       fr: 'MyTravelr est une plateforme qui vous permet de réserver et payer vos billets de bus en toute sécurité.',
       en: 'MyTravelr System is a platform that allows you to book and pay for your bus tickets safely.'
     },
-    image: '/placeholder.svg?height=300&width=400',
+    image: '/images/booking.png?height=300&width=400',
     category: 'web',
     technologies: ['PHP', 'Laravel', 'Tailwind CSS', 'MySQL', 'Javascript'],
     demo: 'https://booking.mytravelr.co',
@@ -390,7 +390,7 @@ const projects = [
       fr: 'Application Mobile de VTC. Il s\'agissait de realiser le front-end de l\'application.',
       en: 'DropMe is a mobile app for VTC. It was about to make the front-end of the application.'
     },
-    image: '/placeholder.svg?height=300&width=400',
+    image: '/images/dropme.svg?height=300&width=400',
     category: 'mobile',
     technologies: ['Flutter', 'Dart', 'Firebase'],
     demo: null,
@@ -407,7 +407,7 @@ const projects = [
       fr: 'Addjey est un générateur de mots de passe aléatoires qui simplifie la tâche de création de mots de passe uniques pour chaque site que vous utilisez.',
       en: 'Addjey is a random password generator that simplifies the task of creating unique passwords for each site you use.'
     },
-    image: '/placeholder.svg?height=300&width=400',
+    image: '/images/addjey.png?height=300&width=400',
     category: 'web',
     technologies: ['HTML', 'Javascript', 'Tailwind CSS'],
     demo: 'https://addjey.meriga.cm',
@@ -424,7 +424,7 @@ const projects = [
       fr: 'Purpay est une application mobile de recharge de crédits/forfaits internet.',
       en: 'Purpay is a mobile app for recharge credits/forfaits internet.'
     },
-    image: '/placeholder.svg?height=300&width=400',
+    image: '/images/purpay.png?height=300&width=400',
     category: 'mobile',
     technologies: ['Flutter', 'Dart', 'Firebase', 'Rest API'],
     demo: null,
@@ -441,7 +441,7 @@ const projects = [
       fr: 'Landing Page de MyTravelr',
       en: 'Landing Page of MyTravelr'
     },
-    image: '/placeholder.svg?height=300&width=400',
+    image: '/images/landing.png?height=300&width=400',
     category: 'web',
     technologies: ['HTML', 'Sass', 'Javascript'],
     demo: 'https://mytravelr.meriga.cm',
@@ -458,10 +458,10 @@ const projects = [
       fr: 'Dashboard de MyTravelr',
       en: 'Dashboard of MyTravelr'
     },
-    image: '/placeholder.svg?height=300&width=400',
+    image: '/images/panel.png?height=300&width=400',
     category: 'web',
     technologies: ['PHP', 'Tailwind CSS', 'MySQL', 'Javascript'],
-    demo: 'https://dashboard.mytravelr.co',
+    demo: 'https://mpanel.mytravelr.co',
     github: null,
     isOpenSource: false
   },
@@ -475,7 +475,7 @@ const projects = [
       fr: 'Application Mobile de MyTravelr',
       en: 'Mobile App of MyTravelr'
     },
-    image: '/placeholder.svg?height=300&width=400',
+    image: '/images/mytravelr-mobile.png?height=300&width=400',
     category: 'mobile',
     technologies: ['Flutter', 'Dart', 'Laravel', 'Rest API', 'MySQL'],
     demo: null,
@@ -492,7 +492,7 @@ const projects = [
       fr: 'Mon portfolio personnel',
       en: 'My personal portfolio'
     },
-    image: '/placeholder.svg?height=300&width=400',
+    image: '/images/om.png?height=300&width=400',
     category: 'web',
     technologies: ['Vue.js', 'Tailwind CSS', 'Javascript'],
     demo: 'https://meriga.cm',
@@ -509,7 +509,7 @@ const projects = [
       fr: 'Site officiel de Busilience',
       en: 'Official website of Busilience'
     },
-    image: '/placeholder.svg?height=300&width=400',
+    image: '/images/busilience.png?height=300&width=400',
     category: 'web',
     technologies: ['HTML', 'CSS', 'Javascript'],
     demo: 'https://busilience.org',

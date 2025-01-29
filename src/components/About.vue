@@ -65,57 +65,69 @@
 
                 <!-- Micro-cartes de passions -->
                 <div class="flex flex-wrap gap-4 mt-6 justify-center">
-                  <div class="passion-card relative w-14 h-14 group">
+                  <div class="passion-card relative w-20 h-20 group">
                     <div class="absolute inset-0 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-700 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 rotate-12 hover:rotate-0 hover:scale-110">
+                      <img 
+                        :src="image1" 
+                        alt="Nature"
+                        class="w-full h-full object-cover"
+                      />
                       <div class="absolute inset-0 bg-gradient-to-br from-[#783DFF]/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                      <div class="absolute inset-0 flex flex-col items-center justify-center">
-                        <CameraIcon class="w-6 h-6 text-[#783DFF] group-hover:scale-110 transition-transform duration-500" />
-                      </div>
                     </div>
                   </div>
                   
-                  <div class="passion-card relative w-14 h-14 group">
+                  <div class="passion-card relative w-20 h-20 group">
                     <div class="absolute inset-0 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-700 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 -rotate-12 hover:rotate-0 hover:scale-110">
+                      <img 
+                        :src="image2" 
+                        alt="Judo"
+                        class="w-full h-full object-cover"
+                      />
                       <div class="absolute inset-0 bg-gradient-to-br from-[#783DFF]/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                      <div class="absolute inset-0 flex flex-col items-center justify-center">
-                        <SwordIcon class="w-6 h-6 text-[#783DFF] group-hover:scale-110 transition-transform duration-500" />
-                      </div>
                     </div>
                   </div>
                   
-                  <div class="passion-card relative w-14 h-14 group">
+                  <div class="passion-card relative w-20 h-20 group">
                     <div class="absolute inset-0 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-700 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 rotate-12 hover:rotate-0 hover:scale-110">
+                      <img 
+                        :src="image3" 
+                        alt="Minimalisme"
+                        class="w-full h-full object-cover"
+                      />
                       <div class="absolute inset-0 bg-gradient-to-br from-[#783DFF]/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                      <div class="absolute inset-0 flex flex-col items-center justify-center">
-                        <LayoutGridIcon class="w-6 h-6 text-[#783DFF] group-hover:scale-110 transition-transform duration-500" />
-                      </div>
                     </div>
                   </div>
                   
-                  <div class="passion-card relative w-14 h-14 group">
+                  <div class="passion-card relative w-20 h-20 group">
                     <div class="absolute inset-0 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-700 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 -rotate-12 hover:rotate-0 hover:scale-110">
+                      <img 
+                        :src="image4" 
+                        alt="Lecture"
+                        class="w-full h-full object-cover"
+                      />
                       <div class="absolute inset-0 bg-gradient-to-br from-[#783DFF]/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                      <div class="absolute inset-0 flex flex-col items-center justify-center">
-                        <BookOpenIcon class="w-6 h-6 text-[#783DFF] group-hover:scale-110 transition-transform duration-500" />
-                      </div>
                     </div>
                   </div>
 
-                  <div class="passion-card relative w-14 h-14 group">
+                  <div class="passion-card relative w-20 h-20 group">
                     <div class="absolute inset-0 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-700 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 rotate-12 hover:rotate-0 hover:scale-110">
+                      <img 
+                        :src="image5" 
+                        alt="Extra"
+                        class="w-full h-full object-cover"
+                      />
                       <div class="absolute inset-0 bg-gradient-to-br from-[#783DFF]/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                      <div class="absolute inset-0 flex flex-col items-center justify-center">
-                        <HeartIcon class="w-6 h-6 text-[#783DFF] group-hover:scale-110 transition-transform duration-500" />
-                      </div>
                     </div>
                   </div>
 
-                  <div class="passion-card relative w-14 h-14 group">
+                  <div class="passion-card relative w-20 h-20 group">
                     <div class="absolute inset-0 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-700 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 -rotate-12 hover:rotate-0 hover:scale-110">
+                      <img 
+                        :src="image6" 
+                        alt="Extra"
+                        class="w-full h-full object-cover"
+                      />
                       <div class="absolute inset-0 bg-gradient-to-br from-[#783DFF]/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                      <div class="absolute inset-0 flex flex-col items-center justify-center">
-                        <MusicIcon class="w-6 h-6 text-[#783DFF] group-hover:scale-110 transition-transform duration-500" />
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -138,8 +150,6 @@
           </div>
         </div>
       </div>
-
-    
 
       <!-- Skills Section -->
       <div class="mb-8 sm:mb-16">
@@ -184,6 +194,41 @@
                     </div>
                     <span>{{ item }}</span>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Organisations Section -->
+      <div class="mb-8 sm:mb-16">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg animate-on-scroll">
+          <h3 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6 sm:mb-8 flex items-center">
+            <span class="w-8 sm:w-10 h-8 sm:h-10 bg-[#783DFF] rounded-lg flex items-center justify-center mr-4">
+              <UsersIcon class="w-4 sm:w-6 h-4 sm:h-6 text-white" />
+            </span>
+            {{ content.organizationsTitle[locale] }}
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+            <div 
+              v-for="(org, index) in content.organizations" 
+              :key="index"
+              class="group bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 hover:shadow-lg transition-all duration-300"
+            >
+              <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <img 
+                    :src="org.name === 'Flutter Cameroon' ? '/src/assets/flutter.jpg' : '/src/assets/laravel.png'" 
+                    :alt="org.name"
+                    class="w-6 h-6 object-contain dark:invert"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 dark:text-white group-hover:text-[#783DFF] transition-colors duration-300">
+                    {{ org.name }}
+                  </h4>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">{{ org.role[locale] }}</p>
                 </div>
               </div>
             </div>
@@ -276,8 +321,18 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
-import { UserIcon, BriefcaseIcon, CodeIcon, GraduationCapIcon, AwardIcon, CameraIcon, SwordIcon, LayoutGridIcon, BookOpenIcon, HeartIcon, MusicIcon } from 'lucide-vue-next'
+import { UserIcon, BriefcaseIcon, CodeIcon, GraduationCapIcon, AwardIcon, CameraIcon, SwordIcon, LayoutGridIcon, BookOpenIcon, HeartIcon, MusicIcon, UsersIcon } from 'lucide-vue-next'
 import manTechIcon from '../assets/man-tech.png'
+import flutterIcon from '../assets/flutter.jpg'
+import laravelIcon from '../assets/laravel.png'
+
+// Import des images pour la galerie
+import image1 from '../assets/1.jpg'
+import image2 from '../assets/2.jpg'
+import image3 from '../assets/3.jpeg'
+import image4 from '../assets/4.jpeg'
+import image5 from '../assets/5.jpeg'
+import image6 from '../assets/6.jpg'
 
 const props = defineProps({
   locale: {
@@ -408,56 +463,6 @@ const content = {
     fr: 'Formation & Certifications',
     en: 'Education & Certifications'
   },
-  galleryTitle: {
-    fr: 'Ma Galerie',
-    en: 'My Gallery'
-  },
-  gallery: [
-    {
-      image: './src/assets/gallery/nature1.jpg',
-      title: {
-        fr: 'Nature',
-        en: 'Nature'
-      },
-      description: {
-        fr: 'Photographie de paysage',
-        en: 'Landscape photography'
-      }
-    },
-    {
-      image: './src/assets/gallery/judo1.jpg',
-      title: {
-        fr: 'Judo',
-        en: 'Judo'
-      },
-      description: {
-        fr: 'Passion pour les arts martiaux',
-        en: 'Passion for martial arts'
-      }
-    },
-    {
-      image: './src/assets/gallery/minimal1.jpg',
-      title: {
-        fr: 'Minimalisme',
-        en: 'Minimalism'
-      },
-      description: {
-        fr: 'Design épuré',
-        en: 'Clean design'
-      }
-    },
-    {
-      image: './src/assets/gallery/reading1.jpg',
-      title: {
-        fr: 'Lecture',
-        en: 'Reading'
-      },
-      description: {
-        fr: 'Développement personnel',
-        en: 'Personal development'
-      }
-    }
-  ],
   experiences: [
     {
       role: {
@@ -563,7 +568,29 @@ const content = {
     clients: 15,
     certifications: 8
   },
-  profileImage: './src/assets/profile.svg'  // Ajoutez le chemin vers votre photo de profil
+  profileImage: './src/assets/profile.svg',  // Ajoutez le chemin vers votre photo de profil
+  organizationsTitle: {
+    fr: 'Organisations',
+    en: 'Organizations'
+  },
+  organizations: [
+    {
+      name: 'Flutter Cameroon',
+      role: {
+        fr: 'Membre',
+        en: 'Member'
+      },
+      icon: flutterIcon
+    },
+    {
+      name: 'Laravel Cameroon',
+      role: {
+        fr: 'Membre',
+        en: 'Member'
+      },
+      icon: laravelIcon
+    }
+  ]
 }
 
 // Fonction pour obtenir l'icône correspondante
