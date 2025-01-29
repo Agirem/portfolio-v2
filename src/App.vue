@@ -300,8 +300,8 @@ import sparklessIcon from './assets/sparkless.png'
 import Loader from './components/Loader.vue'
 
 // State
-const isDark = ref(false)
-const locale = ref('fr')
+const isDark = ref(true)
+const locale = ref('en')
 const isMobileMenuOpen = ref(false)
 const scrolled = ref(false)
 const currentSection = ref('')
@@ -401,6 +401,9 @@ const toggleMobileMenu = () => {
 
 // Lifecycle
 onMounted(() => {
+  // Initialisation du mode sombre
+  document.documentElement.classList.add('dark')
+  
   window.addEventListener('scroll', updateScroll)
   updateScroll() // Initial check
   
