@@ -322,17 +322,17 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { UserIcon, BriefcaseIcon, CodeIcon, GraduationCapIcon, AwardIcon, CameraIcon, SwordIcon, LayoutGridIcon, BookOpenIcon, HeartIcon, MusicIcon, UsersIcon } from 'lucide-vue-next'
-import manTechIcon from '../assets/man-tech.png'
+import manTechIcon from '../assets/man-tech.webp'
 import flutterIcon from '../assets/flutter.jpg'
 import laravelIcon from '../assets/laravel.png'
 
 // Import des images pour la galerie
-import image1 from '../assets/1.jpg'
-import image2 from '../assets/2.jpg'
-import image3 from '../assets/3.jpeg'
-import image4 from '../assets/4.jpeg'
-import image5 from '../assets/5.jpeg'
-import image6 from '../assets/6.jpg'
+import image1 from '../assets/1.webp'
+import image2 from '../assets/2.webp'
+import image3 from '../assets/3.webp'
+import image4 from '../assets/4.webp'
+import image5 from '../assets/5.webp'
+import image6 from '../assets/6.webp'
 
 const props = defineProps({
   locale: {
@@ -568,7 +568,7 @@ const content = {
     clients: 15,
     certifications: 8
   },
-  profileImage: './src/assets/profile.svg',  // Ajoutez le chemin vers votre photo de profil
+  profileImage: './src/assets/profile.webp',  // Ajoutez le chemin vers votre photo de profil
   organizationsTitle: {
     fr: 'Organisations',
     en: 'Organizations'

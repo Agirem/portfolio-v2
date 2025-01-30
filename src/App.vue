@@ -50,7 +50,7 @@
               >
                 <img 
                   v-if="scrolled"
-                  src="/images/logo_white.svg" 
+                  src="/images/logo_white.webp" 
                   alt="Logo"
                   class="w-8 sm:w-10 h-8 sm:h-10 absolute"
                 />
@@ -147,7 +147,7 @@
                   <div class="relative group">
                     <div class="relative aspect-square rounded-2xl bg-white dark:bg-gray-900 overflow-hidden border-2 border-[#783DFF]/10 group-hover:border-[#783DFF]/30 transition-all duration-500">
                       <img 
-                        src="/images/logo_white.svg" 
+                        src="/images/logo_white.webp" 
                         alt="Photo de profil"
                         class="w-full h-full object-cover transform-gpu transition-all duration-500 group-hover:scale-105"
                       />
@@ -295,8 +295,8 @@ import { SunIcon, MoonIcon, MenuIcon, ChevronDownIcon } from 'lucide-vue-next'
 import About from './components/About.vue'
 import Projects from './components/Projects.vue'
 import Contact from './components/Contact.vue'
-import handIcon from './assets/hand.png'
-import sparklessIcon from './assets/sparkless.png'
+import handIcon from './assets/hand.webp'
+import sparklessIcon from './assets/sparkless.webp'
 import Loader from './components/Loader.vue'
 
 // State

@@ -3,7 +3,7 @@
     <div class="relative">
       <!-- Logo animé -->
       <div class="w-24 h-24 relative animate-bounce">
-        <img src="/images/logo_white.svg" alt="Logo" class="w-full h-full object-contain" />
+        <img src="/images/logo_white.webp" alt="Logo" class="w-full h-full object-contain" />
       </div>
      
     </div>
