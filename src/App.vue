@@ -310,8 +310,8 @@ import { SunIcon, MoonIcon, MenuIcon, ChevronDownIcon } from 'lucide-vue-next'
 import About from './components/About.vue'
 import Projects from './components/Projects.vue'
 import Contact from './components/Contact.vue'
-import handIcon from './assets/hand.webp'
-import sparklessIcon from './assets/sparkless.webp'
+import handIcon from './assets/optimized/hand.webp'
+import sparklessIcon from './assets/optimized/sparkless.webp'
 import Loader from './components/Loader.vue'
 
 // State

@@ -356,17 +356,17 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { UserIcon, BriefcaseIcon, CodeIcon, GraduationCapIcon, AwardIcon, CameraIcon, SwordIcon, LayoutGridIcon, BookOpenIcon, HeartIcon, MusicIcon, UsersIcon } from 'lucide-vue-next'
-import manTechIcon from '../assets/man-tech.webp'
+import manTechIcon from '../assets/optimized/man-tech.webp'
 import flutterIcon from '../assets/flutter.jpg'
 import laravelIcon from '../assets/laravel.png'
 
 // Import des images pour la galerie
-import image1 from '../assets/1.webp'
-import image2 from '../assets/2.webp'
-import image3 from '../assets/3.webp'
-import image4 from '../assets/4.webp'
-import image5 from '../assets/5.webp'
-import image6 from '../assets/6.webp'
+import image1 from '../assets/optimized/1.webp'
+import image2 from '../assets/optimized/2.webp'
+import image3 from '../assets/optimized/3.webp'
+import image4 from '../assets/optimized/4.webp'
+import image5 from '../assets/optimized/5.webp'
+import image6 from '../assets/optimized/6.webp'
 
 const props = defineProps({
   locale: {

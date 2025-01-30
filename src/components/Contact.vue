@@ -220,8 +220,8 @@
 <script setup>
 import { ref, reactive } from 'vue'
 import { MailIcon, LinkedinIcon, GithubIcon, TwitterIcon } from 'lucide-vue-next'
-import phoneIcon from '../assets/phone.webp'
-import heartIcon from '../assets/heart.webp'
+import phoneIcon from '../assets/optimized/phone.webp'
+import heartIcon from '../assets/optimized/heart.webp'
 
 const props = defineProps({
   locale: {
