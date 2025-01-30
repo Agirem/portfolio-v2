@@ -163,13 +163,13 @@
                 <!-- Statistiques rapides -->
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-4 sm:pt-6">
                   <div 
-                    v-for="(stat, key) in content.stats" 
+                    v-for="(value, key) in content.stats" 
                     :key="key"
                     class="stat-item relative overflow-hidden group bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/50 rounded-xl p-3 sm:p-4 hover:shadow-lg transition-all duration-300"
                   >
                     <div class="relative z-10">
-                      <div class="text-lg sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#783DFF] to-purple-600 group-hover:scale-110 transition-transform duration-300">{{ stat.value }}+</div>
-                      <div class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">{{ stat.label[locale] }}</div>
+                      <div class="text-lg sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#783DFF] to-purple-600 group-hover:scale-110 transition-transform duration-300">{{ value }}+</div>
+                      <div class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">{{ key }}</div>
                     </div>
                   </div>
                 </div>
@@ -467,32 +467,32 @@ const techColors = {
 // Contenu
 const content = {
   label: {
-    fr: 'À propos',
-    en: 'About'
+    fr: 'À propos de moi',
+    en: 'About me'
   },
   title: {
+    fr: 'Passionné par la Création Numérique',
+    en: 'Passionate about Digital Creation'
+  },
+  subtitle: {
+    fr: 'Découvrez mon parcours, mes compétences et ma passion pour le développement',
+    en: 'Discover my journey, skills, and passion for development'
+  },
+  bioTitle: {
     fr: 'Qui suis-je ?',
     en: 'Who am I?'
   },
-  subtitle: {
-    fr: 'Découvrez mon parcours, mes compétences et mes passions',
-    en: 'Discover my journey, skills and passions'
-  },
-  bioTitle: {
-    fr: 'Biographie',
-    en: 'Biography'
-  },
   bio: {
-    fr: 'Ingénieur logiciel passionné avec plus de 5 ans d\'expérience dans le développement d\'applications web et mobile. Spécialisé dans les technologies modernes comme Vue.js, Flutter et Laravel. Mon approche combine créativité et rigueur technique pour créer des solutions innovantes et performantes.',
-    en: 'Passionate software engineer with over 5 years of experience in web and mobile application development. Specialized in modern technologies like Vue.js, Flutter, and Laravel. My approach combines creativity and technical rigor to create innovative and high-performance solutions.'
+    fr: `Software Engineer passionné avec plus de 5 ans d'expérience dans le développement d'applications web et mobile innovantes. <span class="text-[#783DFF] font-medium">Spécialisé dans les technologies modernes</span> et toujours à l'affût des dernières tendances du développement. En dehors du code, je suis un judoka passionné, ce qui m'aide à maintenir discipline et équilibre. <span class="text-[#783DFF] font-medium">Adepte du minimalisme</span>, je m'intéresse particulièrement au développement personnel à travers la lecture. Pendant mon temps libre, j'explore ma créativité en photographiant la nature, capturant sa beauté dans sa plus simple expression.`,
+    en: `Passionate Software Engineer with over 5 years of experience in developing innovative web and mobile applications. <span class="text-[#783DFF] font-medium">Specialized in modern technologies</span> and always keeping up with the latest development trends. Beyond coding, I'm a dedicated judo practitioner, which helps me maintain discipline and balance. <span class="text-[#783DFF] font-medium">A minimalism enthusiast</span>, I'm particularly interested in personal development through reading. In my spare time, I explore my creativity by photographing nature, capturing its beauty in its simplest form.`
   },
   experienceTitle: {
     fr: 'Expérience Professionnelle',
     en: 'Professional Experience'
   },
   skillsTitle: {
-    fr: 'Compétences & Technologies',
-    en: 'Skills & Technologies'
+    fr: 'Compétences Techniques',
+    en: 'Technical Skills'
   },
   educationTitle: {
     fr: 'Formation & Certifications',
@@ -538,101 +538,70 @@ const content = {
   ],
   skills: [
     {
-      title: {
-        fr: 'Développement Frontend',
-        en: 'Frontend Development'
-      },
-      items: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'TailwindCSS', 'Bootstrap', 'Sass']
+      title: 'Utilisation des logiciels',
+      items: ['VS Code', 'Android Studio', 'IntelliJ IDEA', 'Git', 'GitHub', 'PostMan', 'Figma', 'Adobe Illustrator', 'Adobe Xd', 'Adobe Photoshop']
     },
     {
-      title: {
-        fr: 'Développement Mobile',
-        en: 'Mobile Development'
-      },
-      items: ['Flutter', 'Dart']
+      title: 'Langages maîtrisés',
+      items: ['SQL', 'HTML', 'CSS', 'JavaScript', 'PHP', 'Sass', 'Dart']
     },
     {
-      title: {
-        fr: 'Développement Backend',
-        en: 'Backend Development'
-      },
-      items: ['PHP', 'Laravel', 'MySQL', 'PostgreSQL', 'SQL']
+      title: 'Utilisation des frameworks et CMS',
+      items: ['Vue.js', 'Flutter', 'WordPress', 'Laravel', 'Bootstrap', 'TailwindCSS']
     },
     {
-      title: {
-        fr: 'Outils & Environnements',
-        en: 'Tools & Environments'
-      },
-      items: ['VS Code', 'Android Studio', 'Git', 'GitHub', 'PostMan']
+      title: 'Bases de données',
+      items: ['MySQL', 'PostgreSQL', 'Acces(Moyen)']
     },
     {
-      title: {
-        fr: 'Design & UI/UX',
-        en: 'Design & UI/UX'
-      },
-      items: ['Figma', 'Adobe Illustrator', 'Adobe Xd', 'Adobe Photoshop']
+      title: 'Services d\'hébergements web',
+      items: ['Vercel', 'Github Pages', 'Netlify', 'Hostinger']
     },
     {
-      title: {
-        fr: 'Déploiement',
-        en: 'Deployment'
-      },
-      items: ['Vercel', 'Netlify', 'Hostinger']
+      title: 'Autres compétences',
+      items: ['APIs REST', 'Gestion de projet (Jira, Trello)', 'Référencement naturel (SEO)']
     }
   ],
   education: [
     {
       title: {
-        fr: 'Ingénieur en Génie Logiciel',
-        en: 'Software Engineering Degree'
+        fr: 'Ingénieur en Génie Numérique',
+        en: 'Engineer in Digital Engineering'
       },
-      institution: 'Institut Universitaire de la Côte',
-      year: '2018 - 2021',
-      certifications: [
-        'Développement Web Avancé',
-        'Architecture Logicielle',
-        'Gestion de Projets IT'
-      ]
+      institution: 'ESIGN - Université Inter-Etats Congo-Cameroun',
+      year: '2025'
     },
     {
       title: {
-        fr: 'Certification Flutter',
-        en: 'Flutter Certification'
+        fr: 'Fondamentaux du Marketing Numérique',
+        en: 'Digital Marketing Fundamentals'
       },
-      institution: 'Google Developers',
+      institution: 'Google Ateliers Numériques',
+      year: '01/2023',
+      certificationId: 'R5C MCS WPD'
+    },
+    {
+      title: {
+        fr: 'Parcours Développeur Web',
+        en: 'Web Developer Path'
+      },
+      institution: 'OpenClassrooms',
       year: '2022',
-      certificationId: 'FL-2022-789'
+      certifications: [
+        'Intégrez une maquette Figma en HTML / CSS',
+        'Gérez du code avec Git et GitHub',
+        'Simplifiez-vous le CSS avec Sass',
+        'Créez votre site web avec HTML5 et CSS3',
+        'Mettez en place votre environnement front-end',
+        'Apprenez à utiliser la ligne de commande dans un terminal'
+      ]
     }
   ],
   stats: {
-    experience: {
-      value: '5',
-      label: {
-        fr: 'Années d\'exp.',
-        en: 'Years Exp.'
-      }
-    },
-    projects: {
-      value: '30',
-      label: {
-        fr: 'Projets',
-        en: 'Projects'
-      }
-    },
-    clients: {
-      value: '15',
-      label: {
-        fr: 'Clients',
-        en: 'Clients'
-      }
-    },
-    certifications: {
-      value: '8',
-      label: {
-        fr: 'Certifications',
-        en: 'Certifications'
-      }
-    }
+    experience: 5,
+    projects: 30,
+    clients: 15,
+    certifications: 8
   },
   organizationsTitle: {
     fr: 'Organisations',
