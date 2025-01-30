@@ -10,7 +10,14 @@
       <!-- En-tête -->
       <div class="text-center mb-8 sm:mb-16 animate-on-scroll">
         <div class="inline-flex items-center space-x-2 bg-white dark:bg-gray-800 rounded-full px-3 sm:px-4 py-2 mb-4 sm:mb-6 shadow-md">
-          <img :src="manTechIcon" alt="Tech man" class="w-5 sm:w-6 h-5 sm:h-6 object-contain" />
+          <img 
+            :src="manTechIcon" 
+            alt="Tech man" 
+            class="w-5 sm:w-6 h-5 sm:h-6 object-contain"
+            width="24"
+            height="24"
+            loading="lazy"
+          />
           <span class="text-sm sm:text-base text-gray-600 dark:text-gray-300 font-medium">{{ content.label[locale] }}</span>
         </div>
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-[#783DFF] to-purple-600 text-transparent bg-clip-text mb-4 sm:mb-6 px-4">
@@ -43,6 +50,9 @@
                   :src="content.profileImage" 
                   alt="Profile"
                   class="w-full h-full object-cover"
+                  width="192"
+                  height="192"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -71,6 +81,9 @@
                         :src="image1" 
                         alt="Nature"
                         class="w-full h-full object-cover"
+                        width="80"
+                        height="80"
+                        loading="lazy"
                       />
                       <div class="absolute inset-0 bg-gradient-to-br from-[#783DFF]/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                     </div>
@@ -82,6 +95,9 @@
                         :src="image2" 
                         alt="Judo"
                         class="w-full h-full object-cover"
+                        width="80"
+                        height="80"
+                        loading="lazy"
                       />
                       <div class="absolute inset-0 bg-gradient-to-br from-[#783DFF]/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                     </div>
@@ -93,6 +109,9 @@
                         :src="image3" 
                         alt="Minimalisme"
                         class="w-full h-full object-cover"
+                        width="80"
+                        height="80"
+                        loading="lazy"
                       />
                       <div class="absolute inset-0 bg-gradient-to-br from-[#783DFF]/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                     </div>
@@ -104,6 +123,9 @@
                         :src="image4" 
                         alt="Lecture"
                         class="w-full h-full object-cover"
+                        width="80"
+                        height="80"
+                        loading="lazy"
                       />
                       <div class="absolute inset-0 bg-gradient-to-br from-[#783DFF]/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                     </div>
@@ -115,6 +137,9 @@
                         :src="image5" 
                         alt="Extra"
                         class="w-full h-full object-cover"
+                        width="80"
+                        height="80"
+                        loading="lazy"
                       />
                       <div class="absolute inset-0 bg-gradient-to-br from-[#783DFF]/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                     </div>
@@ -126,6 +151,9 @@
                         :src="image6" 
                         alt="Extra"
                         class="w-full h-full object-cover"
+                        width="80"
+                        height="80"
+                        loading="lazy"
                       />
                       <div class="absolute inset-0 bg-gradient-to-br from-[#783DFF]/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                     </div>
@@ -190,6 +218,9 @@
                         :src="getTechIcon(item)"
                         :alt="item"
                         class="w-full h-full object-contain"
+                        width="20"
+                        height="20"
+                        loading="lazy"
                       />
                     </div>
                     <span>{{ item }}</span>
@@ -214,18 +245,21 @@
             <div 
               v-for="(org, index) in content.organizations" 
               :key="index"
-              class="group bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 hover:shadow-lg transition-all duration-300"
+              class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4"
             >
               <div class="flex items-center space-x-4">
-                <div class="w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div class="w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center">
                   <img 
                     :src="org.name === 'Flutter Cameroon' ? '/src/assets/flutter.jpg' : '/src/assets/laravel.png'" 
                     :alt="org.name"
                     class="w-6 h-6 object-contain dark:invert"
+                    width="24"
+                    height="24"
+                    loading="lazy"
                   />
                 </div>
                 <div>
-                  <h4 class="font-bold text-gray-900 dark:text-white group-hover:text-[#783DFF] transition-colors duration-300">
+                  <h4 class="font-bold text-gray-900 dark:text-white">
                     {{ org.name }}
                   </h4>
                   <p class="text-sm text-gray-500 dark:text-gray-400">{{ org.role[locale] }}</p>
