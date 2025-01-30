@@ -82,6 +82,7 @@
               <button
                 @click="toggleLocale"
                 class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300"
+                :aria-label="locale === 'fr' ? 'Changer la langue en anglais' : 'Change language to French'"
               >
                 <span class="text-sm font-medium text-[#783DFF]">
                   {{ locale.toUpperCase() }}
@@ -92,6 +93,7 @@
               <button
                 @click="toggleTheme"
                 class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300"
+                :aria-label="isDark ? (locale === 'fr' ? 'Activer le mode clair' : 'Enable light mode') : (locale === 'fr' ? 'Activer le mode sombre' : 'Enable dark mode')"
               >
                 <SunIcon v-if="isDark" class="h-4 sm:h-5 w-4 sm:w-5 text-gray-600 dark:text-gray-300" />
                 <MoonIcon v-else class="h-4 sm:h-5 w-4 sm:w-5 text-gray-600 dark:text-gray-300" />
@@ -101,6 +103,8 @@
               <button
                 class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300"
                 @click="toggleMobileMenu"
+                :aria-label="locale === 'fr' ? (isMobileMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu') : (isMobileMenuOpen ? 'Close menu' : 'Open menu')"
+                :aria-expanded="isMobileMenuOpen"
               >
                 <MenuIcon class="h-5 w-5 text-gray-600 dark:text-gray-300" />
               </button>
@@ -272,6 +276,7 @@
                 <a 
                   href="#about" 
                   class="group relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+                  :aria-label="locale === 'fr' ? 'Défiler vers la section À propos' : 'Scroll to About section'"
                 >
                   <div class="absolute inset-0 rounded-full bg-gradient-to-br from-[#783DFF] to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <ChevronDownIcon class="w-5 h-5 sm:w-6 sm:h-6 text-[#783DFF] group-hover:text-white relative z-10 animate-bounce" />
