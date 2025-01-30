@@ -47,7 +47,7 @@
             <div class="relative mx-auto md:mx-0 w-40 sm:w-48 md:w-48">
               <div class="aspect-square rounded-2xl overflow-hidden shadow-xl transform group-hover:scale-105 transition-all duration-500">
                 <img 
-                  :src="content.profileImage" 
+                  :src="profileImage" 
                   alt="Profile"
                   class="w-full h-full object-cover"
                   width="192"
@@ -359,6 +359,7 @@ import { UserIcon, BriefcaseIcon, CodeIcon, GraduationCapIcon, AwardIcon, Camera
 import manTechIcon from '../assets/optimized/man-tech.webp'
 import flutterIcon from '../assets/optimized/flutter.webp'
 import laravelIcon from '../assets/optimized/laravel.webp'
+import profileImage from '../assets/optimized/profile.webp'
 
 // Import des images pour la galerie
 import image1 from '../assets/optimized/1.webp'
@@ -602,7 +603,6 @@ const content = {
     clients: 15,
     certifications: 8
   },
-  profileImage: '/images/profile.webp',  // Déplacé vers le dossier public
   organizationsTitle: {
     fr: 'Organisations',
     en: 'Organizations'
