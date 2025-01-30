@@ -18,7 +18,7 @@
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-[#783DFF] to-purple-600 text-transparent bg-clip-text mb-4 sm:mb-6 px-4">
           {{ content.title[locale] }}
         </h2>
-        <p class="mt-2 sm:mt-3 max-w-2xl mx-auto text-lg sm:text-xl text-gray-500 dark:text-gray-400 px-4">
+        <p class="mt-2 sm:mt-3 max-w-2xl mx-auto text-lg sm:text-xl text-gray-600 dark:text-gray-300 px-4">
           {{ content.subtitle[locale] }}
         </p>
 
@@ -47,6 +47,7 @@
               v-for="category in categories"
               :key="category.id"
               @click="selectedCategory = category.id"
+              :aria-label="category.name[locale]"
               class="relative px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md"
               :style="{
                 color: selectedCategory === category.id ? 'white' : category.color,
@@ -107,6 +108,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="flex items-center px-5 py-2.5 bg-white/95 rounded-full text-sm font-medium text-gray-900 hover:bg-white transform-gpu hover:scale-105 hover:translate-z-4 transition-all duration-300 shadow-lg hover:shadow-white/50"
+                    :aria-label="locale === 'fr' ? `Voir la démo de ${project.title[locale]}` : `View ${project.title[locale]} demo`"
                   >
                     <ExternalLinkIcon class="h-4 w-4 mr-2" />
                     Demo
@@ -117,6 +119,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="flex items-center px-5 py-2.5 bg-[#783DFF]/95 rounded-full text-sm font-medium text-white hover:bg-[#783DFF] transform-gpu hover:scale-105 hover:translate-z-4 transition-all duration-300 shadow-lg hover:shadow-[#783DFF]/50"
+                    :aria-label="locale === 'fr' ? `Voir le code source de ${project.title[locale]} sur GitHub` : `View ${project.title[locale]} source code on GitHub`"
                   >
                     <GithubIcon class="h-4 w-4 mr-2" />
                     GitHub
@@ -135,14 +138,14 @@
               <span 
                 class="text-xs font-medium px-3 py-1.5 rounded-full transition-all duration-300 transform-gpu group-hover:scale-105 group-hover:translate-z-2"
                 :style="{
-                  backgroundColor: `${categories.find(c => c.id === project.category)?.color}15`,
+                  backgroundColor: `${categories.find(c => c.id === project.category)?.color}20`,
                   color: categories.find(c => c.id === project.category)?.color
                 }"
               >
                 {{ categories.find(c => c.id === project.category)?.name[locale] }}
               </span>
             </div>
-            <p class="text-gray-500 dark:text-gray-400 text-sm mb-4 line-clamp-3 group-hover:line-clamp-none transition-all duration-500">
+            <p class="text-gray-700 dark:text-gray-300 text-sm mb-4 line-clamp-3 group-hover:line-clamp-none transition-all duration-500">
               {{ project.description[locale] }}
             </p>
 
@@ -153,19 +156,19 @@
                 :key="tech"
                 class="group/tech relative flex items-center px-3 py-1.5 rounded-full transform-gpu hover:scale-105 hover:translate-z-2 transition-all duration-300 cursor-default overflow-hidden"
                 :style="{
-                  backgroundColor: `${techColors[tech]}15`,
-                  color: techColors[tech] || '#783DFF'
+                  backgroundColor: `${techColors[tech]}20`,
+                  color: techColors[tech] || '#6200EA'
                 }"
               >
                 <!-- Effet de particule au hover -->
                 <div class="absolute inset-0 opacity-0 group-hover/tech:opacity-100 transition-opacity duration-300">
                   <div class="absolute inset-0 bg-gradient-to-r" :style="{
-                    backgroundImage: `linear-gradient(to right, ${techColors[tech]}20, ${techColors[tech]}00)`
+                    backgroundImage: `linear-gradient(to right, ${techColors[tech]}30, ${techColors[tech]}10)`
                   }"></div>
                 </div>
                 <span 
                   class="w-2 h-2 rounded-full mr-2 group-hover/tech:scale-110 transition-transform duration-300 relative z-10"
-                  :style="{ backgroundColor: techColors[tech] || '#783DFF' }"
+                  :style="{ backgroundColor: techColors[tech] || '#6200EA' }"
                 ></span>
                 <span class="text-xs font-medium relative z-10">{{ tech }}</span>
               </div>
@@ -178,6 +181,7 @@
           href="https://github.com/agirem"
           target="_blank"
           rel="noopener noreferrer"
+          :aria-label="locale === 'fr' ? 'Découvrir tous mes projets sur GitHub' : 'Discover all my projects on GitHub'"
           class="group relative bg-gradient-to-br from-[#783DFF] to-purple-600 rounded-2xl shadow-lg overflow-hidden transform-gpu transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#783DFF]/20"
         >
           <!-- Image/Bannière avec même hauteur que les autres -->
@@ -207,7 +211,7 @@
 
           <!-- Partie inférieure avec même padding que les autres -->
           <div class="p-4 sm:p-6">
-            <p class="text-white/80 text-sm text-center group-hover:text-white transition-colors duration-300">
+            <p class="text-white text-sm text-center group-hover:text-white transition-colors duration-300">
               {{ content.moreProjects.description[locale] }}
             </p>
             <!-- Badge "Voir plus" -->
@@ -225,6 +229,7 @@
       <div class="mt-20 text-center">
         <a
           href="#contact"
+          :aria-label="locale === 'fr' ? 'Contactez-moi pour discuter de votre projet' : 'Contact me to discuss your project'"
           class="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#783DFF] to-purple-600 text-white font-medium rounded-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/30"
         >
           <div class="absolute inset-0 bg-white/20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>

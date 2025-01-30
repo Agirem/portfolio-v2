@@ -12,14 +12,14 @@
     <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <!-- En-tête -->
       <div class="text-center mb-8 sm:mb-16">
-        <div class="inline-flex items-center space-x-2 bg-white dark:bg-gray-700 rounded-full px-3 sm:px-4 py-2 mb-4 sm:mb-6 shadow-md">
+        <div class="inline-flex items-center space-x-2 bg-white dark:bg-gray-800 rounded-full px-3 sm:px-4 py-2 mb-4 sm:mb-6 shadow-md">
           <img :src="phoneIcon" alt="Phone" class="w-5 sm:w-6 h-5 sm:h-6 object-contain" />
-          <span class="text-sm sm:text-base text-gray-600 dark:text-gray-300 font-medium">{{ content.label[locale] }}</span>
+          <span class="text-sm sm:text-base text-gray-700 dark:text-gray-200 font-medium">{{ content.label[locale] }}</span>
         </div>
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-[#783DFF] to-purple-600 text-transparent bg-clip-text mb-4 sm:mb-6 px-4">
           {{ content.title[locale] }}
         </h2>
-        <p class="mt-2 sm:mt-3 max-w-2xl mx-auto text-lg sm:text-xl text-gray-500 dark:text-gray-400 px-4">
+        <p class="mt-2 sm:mt-3 max-w-2xl mx-auto text-lg sm:text-xl text-gray-700 dark:text-gray-300 px-4">
           {{ content.subtitle[locale] }}
         </p>
       </div>
@@ -74,6 +74,7 @@
             <button
               type="submit"
               :disabled="isSubmitting"
+              :aria-label="isSubmitting ? content.form.sending[locale] : content.form.submit[locale]"
               class="w-full inline-flex items-center justify-center px-8 py-4 font-medium text-white transition-all duration-300 rounded-xl bg-gradient-to-r from-[#783DFF] to-purple-600 hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <span class="flex items-center gap-2">
@@ -98,13 +99,14 @@
               <a 
                 href="mailto:contact@meriga.cm" 
                 class="flex flex-col gap-3 sm:gap-4 p-4 sm:p-6 bg-gray-50 dark:bg-gray-600 rounded-xl hover:scale-[1.02] transition-transform duration-300 group"
+                :aria-label="locale === 'fr' ? 'Envoyer un email à contact@meriga.cm' : 'Send an email to contact@meriga.cm'"
               >
                 <div class="w-12 h-12 flex items-center justify-center bg-[#783DFF]/10 rounded-lg group-hover:bg-[#783DFF] transition-colors duration-300">
                   <MailIcon class="w-6 h-6 text-[#783DFF] group-hover:text-white transition-colors duration-300" />
                 </div>
                 <div>
                   <h3 class="font-medium text-gray-900 dark:text-white">Email</h3>
-                  <p class="text-gray-500 dark:text-gray-400">contact@meriga.cm</p>
+                  <p class="text-gray-700 dark:text-gray-300">contact@meriga.cm</p>
                 </div>
               </a>
 
@@ -114,13 +116,14 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="flex flex-col gap-3 sm:gap-4 p-4 sm:p-6 bg-gray-50 dark:bg-gray-600 rounded-xl hover:scale-[1.02] transition-transform duration-300 group"
+                :aria-label="locale === 'fr' ? 'Suivez-moi sur X (Twitter) @agirem1' : 'Follow me on X (Twitter) @agirem1'"
               >
                 <div class="w-12 h-12 flex items-center justify-center bg-[#783DFF]/10 rounded-lg group-hover:bg-[#783DFF] transition-colors duration-300">
                   <TwitterIcon class="w-6 h-6 text-[#783DFF] group-hover:text-white transition-colors duration-300" />
                 </div>
                 <div>
                   <h3 class="font-medium text-gray-900 dark:text-white">X (Twitter)</h3>
-                  <p class="text-gray-500 dark:text-gray-400">@agirem1</p>
+                  <p class="text-gray-700 dark:text-gray-300">@agirem1</p>
                 </div>
               </a>
 
@@ -130,13 +133,14 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="flex flex-col gap-3 sm:gap-4 p-4 sm:p-6 bg-gray-50 dark:bg-gray-600 rounded-xl hover:scale-[1.02] transition-transform duration-300 group"
+                :aria-label="locale === 'fr' ? 'Connectez-vous avec moi sur LinkedIn' : 'Connect with me on LinkedIn'"
               >
                 <div class="w-12 h-12 flex items-center justify-center bg-[#783DFF]/10 rounded-lg group-hover:bg-[#783DFF] transition-colors duration-300">
                   <LinkedinIcon class="w-6 h-6 text-[#783DFF] group-hover:text-white transition-colors duration-300" />
                 </div>
                 <div>
                   <h3 class="font-medium text-gray-900 dark:text-white">LinkedIn</h3>
-                  <p class="text-gray-500 dark:text-gray-400">Ousmane Meriga</p>
+                  <p class="text-gray-700 dark:text-gray-300">Ousmane Meriga</p>
                 </div>
               </a>
 
@@ -146,32 +150,33 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="flex flex-col gap-3 sm:gap-4 p-4 sm:p-6 bg-gray-50 dark:bg-gray-600 rounded-xl hover:scale-[1.02] transition-transform duration-300 group"
+                :aria-label="locale === 'fr' ? 'Voir mes projets sur GitHub @agirem' : 'View my projects on GitHub @agirem'"
               >
                 <div class="w-12 h-12 flex items-center justify-center bg-[#783DFF]/10 rounded-lg group-hover:bg-[#783DFF] transition-colors duration-300">
                   <GithubIcon class="w-6 h-6 text-[#783DFF] group-hover:text-white transition-colors duration-300" />
                 </div>
                 <div>
                   <h3 class="font-medium text-gray-900 dark:text-white">GitHub</h3>
-                  <p class="text-gray-500 dark:text-gray-400">@agirem</p>
+                  <p class="text-gray-700 dark:text-gray-300">@agirem</p>
                 </div>
               </a>
             </div>
           </div>
 
           <!-- Message de disponibilité -->
-          <div class="bg-[#783DFF]/5 dark:bg-[#783DFF]/10 rounded-2xl p-4 sm:p-6 border border-[#783DFF]/10">
+          <div class="bg-[#783DFF]/10 dark:bg-[#783DFF]/20 rounded-2xl p-4 sm:p-6 border border-[#783DFF]/20">
             <div class="flex items-center gap-4">
               <div class="flex-shrink-0">
                 <div class="relative">
                   <span class="flex h-4 w-4">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-4 w-4 bg-green-500"></span>
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-600 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-4 w-4 bg-green-600"></span>
                   </span>
                 </div>
               </div>
               <div>
-                <p class="text-[#783DFF] font-medium">{{ content.availability[locale] }}</p>
-                <p class="text-gray-500 dark:text-gray-400 text-sm">{{ content.response[locale] }}</p>
+                <p class="text-[#6200EA] dark:text-[#B388FF] font-medium">{{ content.availability[locale] }}</p>
+                <p class="text-gray-700 dark:text-gray-300 text-sm">{{ content.response[locale] }}</p>
               </div>
             </div>
           </div>
@@ -181,13 +186,13 @@
 
     <!-- Footer -->
     <div class="absolute bottom-2 sm:bottom-4 left-0 right-0 text-center">
-      <p class="text-sm sm:text-base text-gray-500 dark:text-gray-400 flex items-center justify-center gap-2">
+      <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 flex items-center justify-center gap-2">
         Made with <img :src="heartIcon" alt="heart" class="w-4 sm:w-5 h-4 sm:h-5 animate-pulse" /> by 
         <a 
           href="https://github.com/Agirem" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="font-bold text-[#783DFF] hover:text-purple-600 transition-colors duration-300"
+          class="font-bold text-[#6200EA] hover:text-[#7E57C2] dark:text-[#B388FF] dark:hover:text-[#9575CD] transition-colors duration-300"
         >
           Agirem
         </a>
