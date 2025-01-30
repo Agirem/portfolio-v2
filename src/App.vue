@@ -454,22 +454,16 @@ onUnmounted(() => {
 </script>
 
 <style>
-/* Déclaration de la police Google Sans */
-@font-face {
-  font-family: 'Google';
-  src: url('@/GoogleSans-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+/* Import du fichier de polices */
+@import './assets/css/fonts.css';
 
 :root {
-  font-family: 'Google', sans-serif !important;
+  font-family: 'Google Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --perspective: 1000px;
 }
 
 * {
-  font-family: 'Google', sans-serif !important;
+  font-family: 'Google Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .dark {

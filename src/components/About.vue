@@ -250,7 +250,7 @@
               <div class="flex items-center space-x-4">
                 <div class="w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center">
                   <img 
-                    :src="org.name === 'Flutter Cameroon' ? '/src/assets/flutter.jpg' : '/src/assets/laravel.png'" 
+                    :src="org.name === 'Flutter Cameroon' ? flutterIcon : laravelIcon" 
                     :alt="org.name"
                     class="w-6 h-6 object-contain dark:invert"
                     width="24"
@@ -357,8 +357,8 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { UserIcon, BriefcaseIcon, CodeIcon, GraduationCapIcon, AwardIcon, CameraIcon, SwordIcon, LayoutGridIcon, BookOpenIcon, HeartIcon, MusicIcon, UsersIcon } from 'lucide-vue-next'
 import manTechIcon from '../assets/optimized/man-tech.webp'
-import flutterIcon from '../assets/flutter.jpg'
-import laravelIcon from '../assets/laravel.png'
+import flutterIcon from '../assets/optimized/flutter.webp'
+import laravelIcon from '../assets/optimized/laravel.webp'
 
 // Import des images pour la galerie
 import image1 from '../assets/optimized/1.webp'
@@ -602,7 +602,7 @@ const content = {
     clients: 15,
     certifications: 8
   },
-  profileImage: './src/assets/profile.webp',  // Ajoutez le chemin vers votre photo de profil
+  profileImage: '/images/profile.webp',  // Déplacé vers le dossier public
   organizationsTitle: {
     fr: 'Organisations',
     en: 'Organizations'
