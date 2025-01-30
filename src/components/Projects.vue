@@ -12,7 +12,14 @@
       <!-- En-tête avec statistiques -->
       <div class="text-center mb-8 sm:mb-16">
         <div class="inline-flex items-center space-x-2 bg-white dark:bg-gray-700 rounded-full px-3 sm:px-4 py-2 mb-4 sm:mb-6 shadow-md">
-          <img :src="rocketIcon" alt="Rocket" class="w-5 sm:w-6 h-5 sm:h-6 object-contain" />
+          <img 
+            :src="rocketIcon" 
+            alt="Rocket" 
+            class="w-5 sm:w-6 h-5 sm:h-6 object-contain"
+            width="24"
+            height="24"
+            loading="lazy"
+          />
           <span class="text-sm sm:text-base text-gray-600 dark:text-gray-300 font-medium">{{ content.label[locale] }}</span>
         </div>
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-[#783DFF] to-purple-600 text-transparent bg-clip-text mb-4 sm:mb-6 px-4">
@@ -91,6 +98,8 @@
               :src="project.image"
               :alt="project.title[locale]"
               class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+              width="400"
+              height="256"
               loading="lazy"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />

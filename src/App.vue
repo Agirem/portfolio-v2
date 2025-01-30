@@ -150,6 +150,9 @@
                         src="/images/logo_white.webp" 
                         alt="Photo de profil"
                         class="w-full h-full object-cover transform-gpu transition-all duration-500 group-hover:scale-105"
+                        width="256"
+                        height="256"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -162,7 +165,14 @@
                         </span>
                         <span class="text-xs sm:text-sm text-[#783DFF] font-medium whitespace-nowrap flex items-center gap-1">
                           {{ content.hero.status[locale] }}
-                          <img :src="sparklessIcon" alt="sparkless" class="w-3 sm:w-4 h-3 sm:h-4 object-contain" />
+                          <img 
+                            :src="sparklessIcon" 
+                            alt="sparkless" 
+                            class="w-3 sm:w-4 h-3 sm:h-4 object-contain"
+                            width="16"
+                            height="16"
+                            loading="lazy"
+                          />
                         </span>
                       </div>
                     </div>

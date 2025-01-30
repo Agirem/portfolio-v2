@@ -13,7 +13,14 @@
       <!-- En-tête -->
       <div class="text-center mb-8 sm:mb-16">
         <div class="inline-flex items-center space-x-2 bg-white dark:bg-gray-800 rounded-full px-3 sm:px-4 py-2 mb-4 sm:mb-6 shadow-md">
-          <img :src="phoneIcon" alt="Phone" class="w-5 sm:w-6 h-5 sm:h-6 object-contain" />
+          <img 
+            :src="phoneIcon" 
+            alt="Phone" 
+            class="w-5 sm:w-6 h-5 sm:h-6 object-contain"
+            width="24"
+            height="24"
+            loading="lazy"
+          />
           <span class="text-sm sm:text-base text-gray-700 dark:text-gray-200 font-medium">{{ content.label[locale] }}</span>
         </div>
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-[#783DFF] to-purple-600 text-transparent bg-clip-text mb-4 sm:mb-6 px-4">
@@ -187,7 +194,16 @@
     <!-- Footer -->
     <div class="absolute bottom-2 sm:bottom-4 left-0 right-0 text-center">
       <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 flex items-center justify-center gap-2">
-        Made with <img :src="heartIcon" alt="heart" class="w-4 sm:w-5 h-4 sm:h-5 animate-pulse" /> by 
+        Made with 
+        <img 
+          :src="heartIcon" 
+          alt="heart" 
+          class="w-4 sm:w-5 h-4 sm:h-5 animate-pulse"
+          width="20"
+          height="20"
+          loading="lazy"
+        /> 
+        by 
         <a 
           href="https://github.com/Agirem" 
           target="_blank" 
