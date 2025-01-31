@@ -104,7 +104,7 @@
             <div class="grid grid-cols-1 xs:grid-cols-2 gap-4 sm:gap-6">
               <!-- Email -->
               <a 
-                href="mailto:contact@meriga.cm" 
+                href="mailto:me@meriga.cm" 
                 class="flex flex-col gap-3 sm:gap-4 p-4 sm:p-6 bg-gray-50 dark:bg-gray-600 rounded-xl hover:scale-[1.02] transition-transform duration-300 group"
                 :aria-label="locale === 'fr' ? 'Envoyer un email à contact@meriga.cm' : 'Send an email to contact@meriga.cm'"
               >
