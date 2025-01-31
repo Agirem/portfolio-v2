@@ -509,9 +509,9 @@ const projects = [
     image: '/images/om.webp?height=300&width=400',
     category: 'web',
     technologies: ['Vue.js', 'Tailwind CSS', 'Javascript'],
-    demo: 'https://meriga.cm',
-    github: 'https://github.com/agirem/portfolio-v2',
-    isOpenSource: true
+    demo: null,
+    github: null,
+    isOpenSource: false
   },
   {
     id: 9,
