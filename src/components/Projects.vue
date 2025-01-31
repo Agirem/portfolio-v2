@@ -458,7 +458,7 @@ const projects = [
     image: '/images/landing.webp?height=300&width=400',
     category: 'web',
     technologies: ['HTML', 'Sass', 'Javascript'],
-    demo: 'https://mytravelr.meriga.cm',
+    demo: 'https://mytravelr.co',
     github: null,
     isOpenSource: false
   },
