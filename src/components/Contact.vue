@@ -106,14 +106,14 @@
               <a 
                 href="mailto:me@meriga.cm" 
                 class="flex flex-col gap-3 sm:gap-4 p-4 sm:p-6 bg-gray-50 dark:bg-gray-600 rounded-xl hover:scale-[1.02] transition-transform duration-300 group"
-                :aria-label="locale === 'fr' ? 'Envoyer un email à contact@meriga.cm' : 'Send an email to contact@meriga.cm'"
+                :aria-label="locale === 'fr' ? 'Envoyer un email à contact@meriga.cm' : 'Send an email to me@meriga.cm'"
               >
                 <div class="w-12 h-12 flex items-center justify-center bg-[#783DFF]/10 rounded-lg group-hover:bg-[#783DFF] transition-colors duration-300">
                   <MailIcon class="w-6 h-6 text-[#783DFF] group-hover:text-white transition-colors duration-300" />
                 </div>
                 <div>
                   <h3 class="font-medium text-gray-900 dark:text-white">Email</h3>
-                  <p class="text-gray-700 dark:text-gray-300">contact@meriga.cm</p>
+                  <p class="text-gray-700 dark:text-gray-300">me@meriga.cm</p>
                 </div>
               </a>
 
