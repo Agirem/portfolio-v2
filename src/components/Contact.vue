@@ -32,73 +32,9 @@
       </div>
 
       <!-- Grille de contact -->
-      <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
-        <!-- Formulaire -->
-        <div class="bg-white dark:bg-gray-700 rounded-2xl p-4 sm:p-6 lg:p-8 shadow-xl relative overflow-hidden order-2 lg:order-1">
-          <form @submit.prevent="handleSubmit" class="space-y-6 sm:space-y-8 relative">
-            <div class="space-y-6">
-              <!-- Nom -->
-              <div class="relative group">
-                <input 
-                  type="text" 
-                  :placeholder="content.form.name[locale]"
-                  v-model="formData.name"
-                  class="w-full px-4 py-4 bg-gray-50 dark:bg-gray-600 rounded-xl border-2 border-transparent focus:border-[#783DFF] outline-none transition-all duration-300 placeholder-gray-400 dark:placeholder-gray-400 group-hover:bg-gray-100 dark:group-hover:bg-gray-500/50"
-                  :class="{ 'border-red-500': errors.name }"
-                  required
-                />
-                <span v-if="errors.name" class="text-red-500 text-sm mt-2 block">{{ errors.name }}</span>
-              </div>
-
-              <!-- Email -->
-              <div class="relative group">
-                <input 
-                  type="email" 
-                  :placeholder="content.form.email[locale]"
-                  v-model="formData.email"
-                  class="w-full px-4 py-4 bg-gray-50 dark:bg-gray-600 rounded-xl border-2 border-transparent focus:border-[#783DFF] outline-none transition-all duration-300 placeholder-gray-400 dark:placeholder-gray-400 group-hover:bg-gray-100 dark:group-hover:bg-gray-500/50"
-                  :class="{ 'border-red-500': errors.email }"
-                  required
-                />
-                <span v-if="errors.email" class="text-red-500 text-sm mt-2 block">{{ errors.email }}</span>
-              </div>
-
-              <!-- Message -->
-              <div class="relative group">
-                <textarea 
-                  :placeholder="content.form.message[locale]"
-                  v-model="formData.message"
-                  rows="5"
-                  class="w-full px-4 py-4 bg-gray-50 dark:bg-gray-600 rounded-xl border-2 border-transparent focus:border-[#783DFF] outline-none transition-all duration-300 placeholder-gray-400 dark:placeholder-gray-400 resize-none group-hover:bg-gray-100 dark:group-hover:bg-gray-500/50"
-                  :class="{ 'border-red-500': errors.message }"
-                  required
-                ></textarea>
-                <span v-if="errors.message" class="text-red-500 text-sm mt-2 block">{{ errors.message }}</span>
-              </div>
-            </div>
-
-            <!-- Bouton d'envoi -->
-            <button
-              type="submit"
-              :disabled="isSubmitting"
-              :aria-label="isSubmitting ? content.form.sending[locale] : content.form.submit[locale]"
-              class="w-full inline-flex items-center justify-center px-8 py-4 font-medium text-white transition-all duration-300 rounded-xl bg-gradient-to-r from-[#783DFF] to-purple-600 hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              <span class="flex items-center gap-2">
-                <span v-if="isSubmitting" class="animate-spin">
-                  <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                  </svg>
-                </span>
-                <span>{{ isSubmitting ? content.form.sending[locale] : content.form.submit[locale] }}</span>
-              </span>
-            </button>
-          </form>
-        </div>
-
+      <div class="grid lg:grid-cols-1 gap-6 sm:gap-8 lg:gap-12 items-start">
         <!-- Informations de contact -->
-        <div class="space-y-6 sm:space-y-8 order-1 lg:order-2">
+        <div class="space-y-6 sm:space-y-8">
           <!-- Carte avec effet gradient -->
           <div class="bg-white dark:bg-gray-700 rounded-2xl p-4 sm:p-6 lg:p-8 shadow-xl relative overflow-hidden">
             <div class="grid grid-cols-1 xs:grid-cols-2 gap-4 sm:gap-6">

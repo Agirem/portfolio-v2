@@ -372,7 +372,8 @@ const techColors = {
   'HTML': '#E34F26',
   'CSS': '#1572B6',
   'Rest API': '#000000',
-  'Sass': '#CC6699'
+  'Sass': '#CC6699',
+  'Capacitor': '#119EFF',
 }
 
 // Données des projets
@@ -529,24 +530,60 @@ const projects = [
     demo: 'https://busilience.org',
     github: null,
     isOpenSource: false
-  }
-  // À implémenter plus tard
-  // {
-  //   id: 3,
-  //   title: {
-  //     fr: 'API de Gestion de Données',
-  //     en: 'Data Management API'
-  //   },
-  //   description: {
-  //     fr: 'API RESTful performante pour la gestion et l\'analyse de données en temps réel.',
-  //     en: 'High-performance RESTful API for real-time data management and analysis.'
-  //   },
-  //   image: '/placeholder.svg?height=300&width=400',
-  //   category: 'api',
-  //   technologies: ['Node.js', 'Express', 'PostgreSQL', 'Docker'],
-  //   demo: 'https://demo.example.com',
-  //   github: 'https://github.com/example'
-  // }
+  },
+  {
+    id: 10,
+    title: {
+      fr: 'Baraka Landing Page',
+      en: 'Baraka Landing Page'
+    },
+    description: {
+      fr: 'Landing Page de Baraka',
+      en: 'Landing Page of Baraka'
+    },
+    image: '/images/baraka-web.webp?height=300&width=400',
+    category: 'web',
+    technologies: ['Vue.js', 'Tailwind CSS',],
+    demo: 'https://baraka.meriga.cm',
+    github: null,
+    isOpenSource: false
+  },
+  {
+    id: 11,
+    title: {
+      fr: 'Baraka App',
+      en: 'Baraka App'
+    },
+    description: {
+      fr: 'Application mobile de Baraka',
+      en: 'Mobile App of Baraka'
+    },
+    image: '/images/baraka-mobile.webp?height=300&width=400',
+    category: 'mobile',
+    technologies: ['Vue.js', 'Capacitor'],
+    demo: 'https://baraka.meriga.cm',
+    github: null,
+    isOpenSource: false
+  },
+  {
+    id: 12,
+    title: {
+      fr: 'OM Components',
+      en: 'OM Components'
+    },
+    description: {
+      fr: 'Une collection soigneusement élaborée de composants modernes, optimisés et prêts à l\'emploi pour vos projets.',
+      en: 'A collection of modern, optimized, and ready-to-use components for your projects.'
+    },
+    image: '/images/components.webp?height=300&width=400',
+    category: 'web',
+    technologies: ['Vue.js', 'Tailwind CSS'],
+    demo: 'https://components.meriga.cm',
+    github: null,
+    isOpenSource: false
+  },
+ 
+
 ]
 
 // Computed
