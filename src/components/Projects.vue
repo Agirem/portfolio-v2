@@ -391,7 +391,7 @@ const projects = [
     image: '/images/booking.webp?height=300&width=400',
     category: 'web',
     technologies: ['PHP', 'Laravel', 'Tailwind CSS', 'MySQL', 'Javascript'],
-    demo: 'https://booking.mytravelr.co',
+    demo: 'https://booking.mytravelr.cm',
     github: null,
     isOpenSource: false
   },
@@ -459,7 +459,7 @@ const projects = [
     image: '/images/landing.webp?height=300&width=400',
     category: 'web',
     technologies: ['HTML', 'Sass', 'Javascript'],
-    demo: 'https://mytravelr.co',
+    demo: 'https://mytravelr.cm',
     github: null,
     isOpenSource: false
   },
@@ -476,7 +476,7 @@ const projects = [
     image: '/images/panel.webp?height=300&width=400',
     category: 'web',
     technologies: ['PHP', 'Tailwind CSS', 'MySQL', 'Javascript'],
-    demo: 'https://mpanel.mytravelr.co',
+    demo: 'https://mpanel.mytravelr.cm',
     github: null,
     isOpenSource: false
   },
@@ -582,6 +582,24 @@ const projects = [
     github: null,
     isOpenSource: false
   },
+  {
+    id: 13,
+    title: {
+      fr: 'MyTravelr App (Test fermé)',
+      en: 'MyTravelr App(Colsed Tests)'
+    },
+    description: {
+      fr: 'Application mobile de réservation de billes de bus',
+      en: 'Booking Mobile App'
+    },
+    image: '/images/booking.webp?height=300&width=400',
+    category: 'web',
+    technologies: ['Flutter', 'Laravel', 'MySQL', 'Rest API' ],
+    demo: 'https://mytravelr.cm',
+    github: null,
+    isOpenSource: false
+  },
+
  
 
 ]
