@@ -466,25 +466,8 @@ const projects = [
   {
     id: 6,
     title: {
-      fr: 'MyTravelr Dashboard',
-      en: 'MyTravelr Dashboard'
-    },
-    description: {
-      fr: 'Dashboard de MyTravelr',
-      en: 'Dashboard of MyTravelr'
-    },
-    image: '/images/panel.webp?height=300&width=400',
-    category: 'web',
-    technologies: ['PHP', 'Tailwind CSS', 'MySQL', 'Javascript'],
-    demo: 'https://mpanel.mytravelr.cm',
-    github: null,
-    isOpenSource: false
-  },
-  {
-    id: 7,
-    title: {
-      fr: 'MyTravelr Mobile App (en cours)',
-      en: 'MyTravelr Mobile App (in progress)'
+      fr: 'MyTravelr Mobile App',
+      en: 'MyTravelr Mobile App'
     },
     description: {
       fr: 'Application Mobile de MyTravelr',
@@ -498,7 +481,7 @@ const projects = [
     isOpenSource: false
   },
   {
-    id: 8,
+    id: 7,
     title: {
       fr: 'OM Portfolio',
       en: 'OM Portfolio'
@@ -515,7 +498,7 @@ const projects = [
     isOpenSource: false
   },
   {
-    id: 9,
+    id: 8,
     title: {
       fr: 'Busilience',
       en: 'Busilience'
@@ -532,7 +515,7 @@ const projects = [
     isOpenSource: false
   },
   {
-    id: 10,
+    id: 9,
     title: {
       fr: 'Baraka Landing Page',
       en: 'Baraka Landing Page'
@@ -549,7 +532,7 @@ const projects = [
     isOpenSource: false
   },
   {
-    id: 11,
+    id: 10,
     title: {
       fr: 'Baraka App',
       en: 'Baraka App'
@@ -566,7 +549,7 @@ const projects = [
     isOpenSource: false
   },
   {
-    id: 12,
+    id: 11,
     title: {
       fr: 'OM Components',
       en: 'OM Components'
@@ -583,7 +566,7 @@ const projects = [
     isOpenSource: false
   },
   {
-    id: 13,
+    id: 12,
     title: {
       fr: 'MyTravelr App (Test fermé)',
       en: 'MyTravelr App(Colsed Tests)'
